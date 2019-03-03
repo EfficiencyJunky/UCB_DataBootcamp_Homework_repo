@@ -41,6 +41,8 @@ Your final report should include each of the following:
   * Total Purchase Value
   * Average Purchase Total per Person by Gender
 
+![PurchaseAnalysisByGender](Images/05_PurchaseAnalysisByGender.png)
+
 ### Age Demographics
 
 * The below each broken into bins of 4 years (i.e. &lt;10, 10-14, 15-19, etc.)
@@ -49,6 +51,8 @@ Your final report should include each of the following:
   * Total Purchase Value
   * Average Purchase Total per Person by Age Group
 
+![PurchaseAnalysisByAge](Images/06_PurchaseAnalysisByAge.png)
+
 ### Top Spenders
 
 * Identify the the top 5 spenders in the game by total purchase value, then list (in a table):
@@ -56,6 +60,8 @@ Your final report should include each of the following:
   * Purchase Count
   * Average Purchase Price
   * Total Purchase Value
+
+![TopSpenders](Images/07_TopSpenders.png)
 
 ### Most Popular Items
 
@@ -66,6 +72,8 @@ Your final report should include each of the following:
   * Item Price
   * Total Purchase Value
 
+![MostPopularItems](Images/08_MostPopularItems.png)
+
 ### Most Profitable Items
 
 * Identify the 5 most profitable items by total purchase value, then list (in a table):
@@ -74,6 +82,8 @@ Your final report should include each of the following:
   * Purchase Count
   * Item Price
   * Total Purchase Value
+
+![MostProfitableItems](Images/09_MostProfitableItems.png)
 
 As final considerations:
 
