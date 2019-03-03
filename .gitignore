@@ -1,3 +1,5 @@
 # Don't track content of these folders
 02-VBA-Scripting/ExcelFiles/
 03-Python/PyPoll/Resources/
+04-Pandas/PyCitySchools/Resources/
+04-Pandas/HeroesOfPymoli/Resources/
