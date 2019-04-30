@@ -62,7 +62,7 @@ def precipitation():
     for row in results:
         precipitation_dict = { row.date : row.prcp}
         all_precipitation.append(precipitation_dict)
-    print(all_precipitation)
+    # print(all_precipitation)
     return jsonify(all_precipitation)
 
 
@@ -86,7 +86,7 @@ def tobs():
     # Calculate the date 1 year ago from the last data point in the database
     last_date_in_measurement_table = session.query(Measurement).order_by(Measurement.date.desc()).first()
     one_year_ago = dt.date.fromisoformat(last_date_in_measurement_table.date) - dt.timedelta(days=365)
-    print("one year ago: ", one_year_ago)
+    # print("one year ago: ", one_year_ago)
 
     # Perform a query to retrieve the data and precipitation scores
     results = session.query(Measurement.date, Measurement.prcp).filter(Measurement.date > one_year_ago).all()
