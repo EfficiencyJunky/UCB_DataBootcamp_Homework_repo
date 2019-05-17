@@ -118,17 +118,24 @@ Each ad network table needs to have the following columns:
  - views INT
 
 Each MMP table needs to have the following columns:
- - date DATE NOT NULL,   
- - device_type TEXT NOT NULL,   
- - advertiser TEXT NOT NULL,   
- - campaign_type TEXT NOT NULL,   
- - spend FLOAT,   
- - impressions INT,   
- - impressions_unique INT,   
- - clicks INT,   
- - clicks_unique INT,  
- - views INT
+ - date DATE NOT NULL,
+ - advertiser TEXT NOT NULL,
+ - campaign_type TEXT NOT NULL,
+ - installs INT,
+ - sessions INT,
+ - new_workout_saved_unique INT,
+ - af_purchase_unique INT,
+ - af_purchase_all INT,
+ - af_start_trial_unique INT,
+ - af_start_trial_all INT,
+ - trial_starts_unique INT,
+ - trial_starts_all INT,
+ - ltv_subs_unique INT,
+ - ltv_subs_all INT,
+ - ltv_subs_revenue FLOAT
+
+Once the database is created and tables set up, we just simply load the data using S
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDc3NzI5ODYsLTEzMzQ2NDU3NjgsNj
-YxNTAyMDMyLC0zOTk1MTg1OTcsLTEwODA5MzgxMjhdfQ==
+eyJoaXN0b3J5IjpbLTc2NTM0ODkxMywtMTMzNDY0NTc2OCw2Nj
+E1MDIwMzIsLTM5OTUxODU5NywtMTA4MDkzODEyOF19
 -->
