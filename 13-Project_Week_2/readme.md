@@ -77,7 +77,8 @@ So in the end we have 6 data frames from the advertisers.
  - Google IOS 
  - Google ANDROID
 
-Each dataframe will be 
+Each dataframe will be in this format:
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MjI1ODUxNywtMTA4MDkzODEyOF19
+eyJoaXN0b3J5IjpbLTM5OTUxODU5NywtMTA4MDkzODEyOF19
 -->
