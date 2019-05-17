@@ -65,8 +65,9 @@ The first step is to get all of the data in one place. To get the data from the 
  - AppsFlyer Android
  - NOTE: Apple Search Ads don't really provide a data report, but they send some of the spending data to our MMP so we just rely on that as our source of Spending data for Apple Search Ads
 
-
+### TRANSFORMATION!!!
+This is the meat and potatoes of solving this problem
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3OTIxOTk4NywtMTA4MDkzODEyOF19
+eyJoaXN0b3J5IjpbLTMwNDg3NjgwLC0xMDgwOTM4MTI4XX0=
 -->
