@@ -15,6 +15,7 @@ Here's a diagram that attempts to explain the dilemma:
 Let's get a quick explanation of the above diagram, which ad networks we're talking about and what data they provide as well as a quick description of our Mobile Measurement Partner and what they provide.
 
 **DATA SOURCE 1 -- The Ad Networks: Providing top of the funnel data**
+
 To start the process of acquiring users, we give money to a variety of ad networks:
 
  - Facebook
@@ -32,7 +33,9 @@ Each of these networks individually reports their top of the funnel metrics spli
  - Views (if applicable)
  - Clicks
 
+
 **DATA SOURCE 2 -- Mobile Measurement Partner: Providing Mid/Lower-funnel data**
+
 Once the user clicks on an ad, they are taken to their respective app store (Apple's AppStore or Google's Play Store), and at this point, they have left the ad network's domain. Once they download the app and install it, we need to know which ad network to attribute the install and subsequent user events to. In order to do this, we have to use a special service called a Mobile Measurement Partner. They are an unbiased 3rd party that checks in with each ad network and verifies who gets credit for the install. We also send the MMP data on other important events so they can attribute these to the right ad network as well.
 
 **Here's the data they gather:**
@@ -52,5 +55,5 @@ With the above data we can essentially gain a complete understanding of where to
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MDg1NDY5OCwtMTA4MDkzODEyOF19
+eyJoaXN0b3J5IjpbNTUyMjcwOTYsLTEwODA5MzgxMjhdfQ==
 -->
