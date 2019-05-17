@@ -53,7 +53,8 @@ Once the user clicks on an ad, they are taken to their respective app store (App
 ## PUTTING IT ALL TOGETHER
 With the above data we can essentially gain a complete understanding of where to put our money or what optimizations to make. But how do we combine it all together when it's all in different places and formatted differently by each advertiser?
 
-
+### EXTRACTION!!!
+	The first step is to get all of the data. For the Advertisers, I build a report on each ad-network and have that sent to my inbox each morning.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUyMjcwOTYsLTEwODA5MzgxMjhdfQ==
+eyJoaXN0b3J5IjpbLTkxNTg3MzcwOCwtMTA4MDkzODEyOF19
 -->
