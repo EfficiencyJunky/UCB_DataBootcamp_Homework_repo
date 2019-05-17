@@ -140,8 +140,12 @@ Once the database is created and tables set up, we just simply load the data usi
 ## PLAYING WITH THE DATA
 Now comes the fun part! We get to play with all our nicely formatted and centralized database of awesomeness!
 
-There are a million ways we could use this data to tell stories and draw actionable insights, but I'll outline 
+There are a million ways we could use this data to tell stories and draw actionable insights, but I'll keep it simple and outline one simple usecase.
+
+The daily / weekly report of Spend, Installs, Trial Starts, and the Cost Per Install and Cost Per Trial Start broken out by each ad network and campaign_type.
+
+This set of information is paramount to understanding what bid-caps we need to set on each campaign of each network in order to ensure we aren't spending more money than 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NTc0NDQ1NywtMTMzNDY0NTc2OCw2Nj
-E1MDIwMzIsLTM5OTUxODU5NywtMTA4MDkzODEyOF19
+eyJoaXN0b3J5IjpbNjUzNDUzNzUzLC0xMzM0NjQ1NzY4LDY2MT
+UwMjAzMiwtMzk5NTE4NTk3LC0xMDgwOTM4MTI4XX0=
 -->
