@@ -93,12 +93,13 @@ Since we don't have the Ad network data for Organics (obviously) and the same go
 ![enter image description here](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/transform-organic_asa.png?raw=true)
 
 **COMBINE THEM TOGETHER INTO SEPARATE IOS AND ANDROID DATAFRAMES**
-Now that we've nicely formatted all oNow for the easy part! Essentially we just need to combine all of the individual advertiser dataframes from each OS and 
+Now that we've nicely formatted all of our dataframes from each advertiser to have the same structure and separated them by operating system (IOS and ANDROID) all we have to do is combine all of the individual advertiser dataframes for each OS.
+The result is two dataframes (one for IOS and one for ANDROID) with all the top funnel metrics tagged by advertiser and campaign_type! WOO
 
 ### LOADING!!!
 set up our Database schema to accept the prepared information in all of the dataframes.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDQ4NTEwODIsLTEzMzQ2NDU3NjgsNj
-YxNTAyMDMyLC0zOTk1MTg1OTcsLTEwODA5MzgxMjhdfQ==
+eyJoaXN0b3J5IjpbLTI4NTI5NDg4OSwtMTMzNDY0NTc2OCw2Nj
+E1MDIwMzIsLTM5OTUxODU5NywtMTA4MDkzODEyOF19
 -->
