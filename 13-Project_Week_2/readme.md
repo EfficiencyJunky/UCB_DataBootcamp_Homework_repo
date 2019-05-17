@@ -148,7 +148,32 @@ This set of information is paramount to understanding what bid-caps we need to s
 
 In order to get the above information, we only need to run one simple query that looks like this:
 
+    SELECT advertiser, campaign_type, tot_spend, tot_installs, tot_spend/tot_installs as CPI, tot_trials, tot_spend/tot_trials as CPT
+    FROM
+    (
+    	SELECT ads.advertiser as advertiser, ads.campaign_type as campaign_type, sum(ads.spend) as tot_spend, sum(ads.impressions) as tot_impressions, sum(ads.clicks) as tot_clicks, 
+    		sum(aps.installs) as tot_installs, 
+    		sum(aps.sessions) as tot_sessions, 
+    		sum(aps.new_workout_saved_unique) as tot_workouts, 
+    		-- aps.af_purchase_unique,
+    		-- aps.af_purchase_all,
+    		-- aps.af_start_trial_unique,
+    		-- aps.af_start_trial_all,
+    		-- aps.trial_starts_unique,
+    		sum(aps.trial_starts_all) as tot_trials,
+    		-- aps.ltv_subs_unique,
+    		sum(aps.ltv_subs_all) as tot_subs,
+    		sum(aps.ltv_subs_revenue) as tot_revenue
+    	FROM advertisers_ios ads
+    	JOIN appsflyer_ios aps
+    	ON (ads.date = aps.date) AND (ads.advertiser = aps.advertiser) AND (ads.campaign_type = aps.campaign_type)
+    	WHERE ads.date >= "2019-05-06" and ads.date <= "2019-05-12" 
+    	GROUP BY ads.advertiser, ads.campaign_type
+    ) AS derivedTable;
+
+
+As you can see, I left a couple columns in there b
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NjE2MzU4MCwtMTMzNDY0NTc2OCw2Nj
+eyJoaXN0b3J5IjpbMTczNzcwMjU5NCwtMTMzNDY0NTc2OCw2Nj
 E1MDIwMzIsLTM5OTUxODU5NywtMTA4MDkzODEyOF19
 -->
