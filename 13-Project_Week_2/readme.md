@@ -77,8 +77,9 @@ So in the end we have 6 data frames from the advertisers.
  - Google IOS 
  - Google ANDROID
 
-Each dataframe will be in this format:
-
+**Each ad network's dataframe will be transformed into this format:**
+![enter image description here](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/transform-facebook.png?raw=true)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5OTUxODU5NywtMTA4MDkzODEyOF19
+eyJoaXN0b3J5IjpbLTE0MjU2MDAzNDMsLTM5OTUxODU5NywtMT
+A4MDkzODEyOF19
 -->
