@@ -137,17 +137,18 @@ Each MMP table needs to have the following columns:
 Once the database is created and tables set up, we just simply load the data using SQL Alchemy commands.
 
 
-## PLAYING WITH THE DATA
+## PLAYING WITH THE DATA -- GAINING ACTIONABLE INSIGHTS
 Now comes the fun part! We get to play with all our nicely formatted and centralized database of awesomeness!
 
 There are a million ways we could use this data to tell stories and draw actionable insights, but I'll keep it simple and outline one simple usecase.
 
 The daily / weekly report of Spend, Installs, Trial Starts, and the Cost Per Install and Cost Per Trial Start broken out by each ad network and campaign_type.
 
-This set of information is paramount to understanding what bid-caps we need to set on each campaign of each network in order to ensure we aren't spending more money than we are making and run a very efficient and lean business.
+This set of information is paramount to understanding what bid-caps we need to set on each campaign of each ad network in order to ensure we aren't spending more money than we are making and run a very efficient and lean business.
 
+In order to get the above information, we only need to run one simple query that looks like this:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzkxNTU4MDMsLTEzMzQ2NDU3NjgsNj
-YxNTAyMDMyLC0zOTk1MTg1OTcsLTEwODA5MzgxMjhdfQ==
+eyJoaXN0b3J5IjpbMTk5NjE2MzU4MCwtMTMzNDY0NTc2OCw2Nj
+E1MDIwMzIsLTM5OTUxODU5NywtMTA4MDkzODEyOF19
 -->
