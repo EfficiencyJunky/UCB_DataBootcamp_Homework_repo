@@ -4,6 +4,9 @@ In my day job, I run paid acquisition efforts at a small app publisher. My goal 
 
 In order to do this, we need to be advertising on as many ad networks as possible, and efficiently managing spend across all of these platforms. But the problem is, the important information I need to know is spread out in many places. Spend, impressions, views, and clicks come from the Ad Networks, and then Installs, Activations, Trial Starts, Subscriptions, Revenue, and various other engagement metrics come from us, the Publisher. We send most of this information to a 3rd party aggregator called an MMP (Mobile Measurement Partner) because they also have the special ability to verify where the installs came from.
 
+## The Dilemma
+So we need a quick and easy way to combine the top funnel metrics provided by each individual ad network with the post install events that are attributed to each ad network.
+
 Here's a diagram that attempts to explain the dilemma:
 ![Acquisition Managers Dilemma](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/acquisition_managers_dillemma.png?raw=true)
 
@@ -43,5 +46,5 @@ Here's the information they gather:
 
 ## PUTTING IT ALL TOGETHER
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIzNzkwNTYzLC0xMDgwOTM4MTI4XX0=
+eyJoaXN0b3J5IjpbMTUyNDg4NTIyOCwtMTA4MDkzODEyOF19
 -->
