@@ -85,11 +85,12 @@ So in the end we have 6 clean data frames from the advertisers:
 
 
 **NOW FOR THE MMP**
-Thankfully, the MMP already provides a separate CSV for iOS and ANDROID, but they also include a ton of extra columns of information that we don't need. So the transformation of each MMP data set needs to remove these columns, 
+Thankfully, the MMP already provides a separate CSV for iOS and ANDROID, but they also include a ton of extra columns of information that we don't need. So the transformation of each MMP data set needs to remove these columns, and add the same "campaign_type" column that we added to the ad networks' data frames so that we can combine them together in a groupby using this extra column.
+
 
 
 **WHAT ABOUT ORGANICS AND APPLE SEARCH ADS?**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODQzMjYyODQsLTM5OTUxODU5NywtMT
-A4MDkzODEyOF19
+eyJoaXN0b3J5IjpbNjYxNTAyMDMyLC0zOTk1MTg1OTcsLTEwOD
+A5MzgxMjhdfQ==
 -->
