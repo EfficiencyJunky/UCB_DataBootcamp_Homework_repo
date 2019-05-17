@@ -134,8 +134,14 @@ Each MMP table needs to have the following columns:
  - ltv_subs_all INT,
  - ltv_subs_revenue FLOAT
 
-Once the database is created and tables set up, we just simply load the data using S
+Once the database is created and tables set up, we just simply load the data using SQL Alchemy commands.
+
+
+## PLAYING WITH THE DATA
+Now comes the fun part! We get to play with all our nicely formatted and centralized database of awesomeness!
+
+There are a million ways we could use this data to tell stories and draw actionable insights, but I'll outline 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NTM0ODkxMywtMTMzNDY0NTc2OCw2Nj
+eyJoaXN0b3J5IjpbMTQ3NTc0NDQ1NywtMTMzNDY0NTc2OCw2Nj
 E1MDIwMzIsLTM5OTUxODU5NywtMTA4MDkzODEyOF19
 -->
