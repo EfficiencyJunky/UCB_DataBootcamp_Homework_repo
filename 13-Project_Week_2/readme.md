@@ -36,7 +36,8 @@ Each of these networks individually reports their top of the funnel metrics spli
 
 **DATA SOURCE 2 -- Mobile Measurement Partner: Providing Mid/Lower-funnel data**
 
-Once the user clicks on an ad, they are taken to their respective app store (Apple's AppStore or Google's Play Store), and at this point, they have left the ad network's domain. Once they download the app and install it, we need to know which ad network to attribute the install and subsequent user events to. In order to do this, we have to use a special service called a Mobile Measurement Partner. They are an unbiased 3rd party that checks in with each ad network and verifies who gets credit for the install. We also send the MMP data on other important events so they can attribute these to the right ad network as well.
+Once the user clicks on an ad, they are taken to their respective app store (Apple's AppStore or Google's Play Store), and at this point, they have left the ad network's domain. Once they download the app and install it, we need to know which ad network to attribute the install and subsequent user events to. And then anything that isn't attributed to an ad-network needs to be counted as "Organic".
+In order to do this, we have to use a special service called a Mobile Measurement Partner. They are an unbiased 3rd party that checks in with each ad network and verifies who gets credit for the install. We also send the MMP data on other important events so they can attribute these to the right ad network as well.
 
 **Here's the data they gather:**
 
@@ -55,7 +56,7 @@ With the above data we can essentially gain a complete understanding of where to
 
 ### EXTRACTION!!!
 	The first step is to get all of the data in one place. To get the data from the ad-networks, I build a report on each ad-network and have that sent to my inbox each morning.
-
+	So that means one CSV for each Ad-Network
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM0MzUyMzMyLC0xMDgwOTM4MTI4XX0=
+eyJoaXN0b3J5IjpbMjE0NDgxNDgzLC0xMDgwOTM4MTI4XX0=
 -->
