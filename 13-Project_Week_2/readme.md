@@ -10,7 +10,9 @@ We need a quick and easy way to combine the top funnel metrics provided by each 
 Here's a diagram that attempts to explain the dilemma:
 ![Acquisition Managers Dilemma](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/acquisition_managers_dillemma.png?raw=true)
 
-So what is going on here?
+
+## The Data
+Let's get a quick explanation of the above diagram, which ad networks we're talking about and what data they provide as well as a quick description of our Mobile Measurement Partner and what they provide.
 
 **DATA SOURCE 1 -- The Ad Networks: Providing top of the funnel data**
 To start the process of acquiring users, we give money to a variety of ad networks:
@@ -23,7 +25,7 @@ To start the process of acquiring users, we give money to a variety of ad networ
 
 Each of these networks individually reports their top of the funnel metrics split out by Campaign/Ad-set/ad:
 
-Here's essentially what they provide:
+**Here's essentially what data they provide:**
  - Date
  - Spend
  - Reach/Impressions
@@ -33,7 +35,7 @@ Here's essentially what they provide:
 **DATA SOURCE 2 -- Mobile Measurement Partner: Providing Mid/Lower-funnel data**
 Once the user clicks on an ad, they are taken to their respective app store (Apple's AppStore or Google's Play Store), and at this point, they have left the ad network's domain. Once they download the app and install it, we need to know which ad network to attribute the install and subsequent user events to. In order to do this, we have to use a special service called a Mobile Measurement Partner. They are an unbiased 3rd party that checks in with each ad network and verifies who gets credit for the install. We also send the MMP data on other important events so they can attribute these to the right ad network as well.
 
-Here's the information they gather:
+**Here's the data they gather:**
 
  - 	Ad Network
  - Campaign/ad-set/ad Name
@@ -44,8 +46,9 @@ Here's the information they gather:
  - Trial starts
  - Revenue events and revenue
 
+
 ## PUTTING IT ALL TOGETHER
+With the above data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTM4MjE2MzAsLTEwODA5MzgxMjhdfQ
-==
+eyJoaXN0b3J5IjpbLTUwNTY4NTE4OCwtMTA4MDkzODEyOF19
 -->
