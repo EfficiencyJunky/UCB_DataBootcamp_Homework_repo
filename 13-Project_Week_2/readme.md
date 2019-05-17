@@ -174,9 +174,10 @@ In order to get the above information, we only need to run one simple query that
 
 As you can see, I left a couple columns in there but they are commented out. Those columns could be useful to add to this report if we wanted too. So many options! so little time!
 
-Here's an example output from this query:
-
+Here's an example output from this query (using ):
+![](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/actionable_insights.png?raw=true)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0Mzk4NTE5NCwtMTMzNDY0NTc2OCw2Nj
-E1MDIwMzIsLTM5OTUxODU5NywtMTA4MDkzODEyOF19
+eyJoaXN0b3J5IjpbLTU3NTIxNDYzOCwtMzQzOTg1MTk0LC0xMz
+M0NjQ1NzY4LDY2MTUwMjAzMiwtMzk5NTE4NTk3LC0xMDgwOTM4
+MTI4XX0=
 -->
