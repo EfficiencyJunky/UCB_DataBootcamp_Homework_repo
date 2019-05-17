@@ -105,9 +105,30 @@ The result is two dataframes (one for IOS and one for ANDROID) with all the top 
 ### LOADING!!!
 Now for the easy part! We just set up our Database schema to accept the prepared information for the 4 dataframes listed above!
 
-Each a
+Each ad network table needs to have the following columns:
+ - date DATE NOT NULL,   
+ - device_type TEXT NOT NULL,   
+ - advertiser TEXT NOT NULL,   
+ - campaign_type TEXT NOT NULL,   
+ - spend FLOAT,   
+ - impressions INT,   
+ - impressions_unique INT,   
+ - clicks INT,   
+ - clicks_unique INT,  
+ - views INT
 
+Each MMP table needs to have the following columns:
+ - date DATE NOT NULL,   
+ - device_type TEXT NOT NULL,   
+ - advertiser TEXT NOT NULL,   
+ - campaign_type TEXT NOT NULL,   
+ - spend FLOAT,   
+ - impressions INT,   
+ - impressions_unique INT,   
+ - clicks INT,   
+ - clicks_unique INT,  
+ - views INT
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTkyMDI2NjcsLTEzMzQ2NDU3NjgsNj
+eyJoaXN0b3J5IjpbLTIxMDc3NzI5ODYsLTEzMzQ2NDU3NjgsNj
 YxNTAyMDMyLC0zOTk1MTg1OTcsLTEwODA5MzgxMjhdfQ==
 -->
