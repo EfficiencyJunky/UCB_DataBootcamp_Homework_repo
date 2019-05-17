@@ -92,11 +92,13 @@ Thankfully, the MMP already provides a separate CSV for iOS and ANDROID, but the
 Since we don't have the Ad network data for Organics (obviously) and the same goes for Apple Search Ads (because apple is just like that) we have to create placeholder "spoof" data frames for each of these sources in place of the ad network data frame. This way, we can properly combine all of the sources together with the MMP data and the Organics and Apple Search Ads will just have "NaN" for the top-funnel metrics that we aren't able to get for them
 ![enter image description here](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/transform-organic_asa.png?raw=true)
 
+**COMBINE THEM TOGETHER INTO SEPARATE IOS AND ANDROID DATAFRAMES**
+Now that we've nicely formatted all oNow for the easy part! Essentially we just need to combine all of the individual advertiser dataframes from each OS and 
 
 ### LOADING!!!
-Now for the easy part! Essentially we just need to set up our Database schema to accept the prepared information in all of the dataframes.
+set up our Database schema to accept the prepared information in all of the dataframes.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NTk1NDg0LC0xMzM0NjQ1NzY4LDY2MT
-UwMjAzMiwtMzk5NTE4NTk3LC0xMDgwOTM4MTI4XX0=
+eyJoaXN0b3J5IjpbLTE2MDQ4NTEwODIsLTEzMzQ2NDU3NjgsNj
+YxNTAyMDMyLC0zOTk1MTg1OTcsLTEwODA5MzgxMjhdfQ==
 -->
