@@ -90,8 +90,93 @@ Thankfully, the MMP already provides a separate CSV for iOS and ANDROID, but the
 
 **WHAT ABOUT ORGANICS AND APPLE SEARCH ADS?**
 Since we don't have the Ad network data for Organics (obviously) and the same goes for Apple Search Ads (because apple is just like that) we have to create placeholder "spoof" data frames for each of these sources in place of the ad network data frame. This way, we can properly combine all of the sources together with the MMP data and the Organics and Apple Search Ads will just have "NaN" for the top-funnel metrics that we aren't able to get for them
+![enter image description here](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/transform-organic_asa.png?raw=true)
+
+**COMBINE THEM TOGETHER INTO SEPARATE IOS AND ANDROID DATAFRAMES**
+Now that we've nicely formatted all of our dataframes from each advertiser to have the same structure and separated them by operating system (IOS and ANDROID) all we have to do is combine all of the individual advertiser dataframes for each OS.
+The result is two dataframes (one for IOS and one for ANDROID) with all the top funnel metrics tagged by advertiser and campaign_type! WOOT!
+
+**So our final set of data frames looks like this**
+ - All advertiser top funnel metrics for IOS
+ - All advertiser top funnel metrics for ANDROID
+ - MMP cleaned mid/low funnel metrics for IOS
+ - MMP cleaned mid/low funnel metrics for IOS
+
+### LOADING!!!
+Now for the easy part! We just set up our Database schema to accept the prepared information for the 4 dataframes listed above!
+
+Each ad network table needs to have the following columns:
+ - date DATE NOT NULL,   
+ - device_type TEXT NOT NULL,   
+ - advertiser TEXT NOT NULL,   
+ - campaign_type TEXT NOT NULL,   
+ - spend FLOAT,   
+ - impressions INT,   
+ - impressions_unique INT,   
+ - clicks INT,   
+ - clicks_unique INT,  
+ - views INT
+
+Each MMP table needs to have the following columns:
+ - date DATE NOT NULL,
+ - advertiser TEXT NOT NULL,
+ - campaign_type TEXT NOT NULL,
+ - installs INT,
+ - sessions INT,
+ - new_workout_saved_unique INT,
+ - af_purchase_unique INT,
+ - af_purchase_all INT,
+ - af_start_trial_unique INT,
+ - af_start_trial_all INT,
+ - trial_starts_unique INT,
+ - trial_starts_all INT,
+ - ltv_subs_unique INT,
+ - ltv_subs_all INT,
+ - ltv_subs_revenue FLOAT
+
+Once the database is created and tables set up, we just simply load the data using SQL Alchemy commands.
+
+
+## PLAYING WITH THE DATA -- GAINING ACTIONABLE INSIGHTS
+Now comes the fun part! We get to play with all our nicely formatted and centralized database of awesomeness!
+
+There are a million ways we could use this data to tell stories and draw actionable insights, but I'll keep it simple and outline one simple usecase.
+
+The daily / weekly report of Spend, Installs, Trial Starts, and the Cost Per Install and Cost Per Trial Start broken out by each ad network and campaign_type.
+
+This set of information is paramount to understanding what bid-caps we need to set on each campaign of each ad network in order to ensure we aren't spending more money than we are making and run a very efficient and lean business.
+
+In order to get the above information, we only need to run one simple query that looks like this:
+
+    SELECT advertiser, campaign_type, tot_spend, tot_installs, tot_spend/tot_installs as CPI, tot_trials, tot_spend/tot_trials as CPT
+    FROM
+    (
+    	SELECT ads.advertiser as advertiser, ads.campaign_type as campaign_type, sum(ads.spend) as tot_spend, sum(ads.impressions) as tot_impressions, sum(ads.clicks) as tot_clicks, 
+    		sum(aps.installs) as tot_installs, 
+    		sum(aps.sessions) as tot_sessions, 
+    		sum(aps.new_workout_saved_unique) as tot_workouts, 
+    		-- aps.af_purchase_unique,
+    		-- aps.af_purchase_all,
+    		-- aps.af_start_trial_unique,
+    		-- aps.af_start_trial_all,
+    		-- aps.trial_starts_unique,
+    		sum(aps.trial_starts_all) as tot_trials,
+    		-- aps.ltv_subs_unique,
+    		sum(aps.ltv_subs_all) as tot_subs,
+    		sum(aps.ltv_subs_revenue) as tot_revenue
+    	FROM advertisers_ios ads
+    	JOIN appsflyer_ios aps
+    	ON (ads.date = aps.date) AND (ads.advertiser = aps.advertiser) AND (ads.campaign_type = aps.campaign_type)
+    	WHERE ads.date >= "2019-05-06" and ads.date <= "2019-05-12" 
+    	GROUP BY ads.advertiser, ads.campaign_type
+    ) AS derivedTable;
+
+
+As you can see, I left a couple columns in there but they are commented out. Those columns could be useful to add to this report if we wanted too. So many options! so little time!
+
+Here's an example output from this query:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzQ2NDU3NjgsNjYxNTAyMDMyLC0zOT
-k1MTg1OTcsLTEwODA5MzgxMjhdfQ==
+eyJoaXN0b3J5IjpbLTM0Mzk4NTE5NCwtMTMzNDY0NTc2OCw2Nj
+E1MDIwMzIsLTM5OTUxODU5NywtMTA4MDkzODEyOF19
 -->
