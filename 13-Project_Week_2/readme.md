@@ -10,15 +10,18 @@ Here's a diagram that attempts to explain the dilemma:
 So what is going on here?
 
 **DATA SOURCE 1 -- The Ad Networks: Providing top of the funnel data**
-To start the process of acquiring users, we give money to a variety of ad networks, and each of these networks individually reports the following split out by Campaign/Ad-set/ad:
+To start the process of acquiring users, we give money to a variety of ad networks:
 
+, and each of these networks individually reports their top of the funnel metrics split out by Campaign/Ad-set/ad:
+
+Here's essentially what they provide:
  - Date
  - Spend
  - Reach/Impressions
  - Views (if applicable)
  - Clicks
 
+This information alone can't tell us how good our ads are at acquiring qualified users though. For that 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDgzMTEzMTksLTEwODA5MzgxMjhdfQ
-==
+eyJoaXN0b3J5IjpbMjA5MTcyMzIzMCwtMTA4MDkzODEyOF19
 -->
