@@ -85,8 +85,11 @@ So in the end we have 6 clean data frames from the advertisers:
 
 
 **NOW FOR THE MMP**
-Thankfu
+Thankfully, the MMP already provides a separate CSV for iOS and ANDROID, but they also include a ton of extra columns of information that we don't need. So the transformation of each MMP data set needs to remove these columns, 
+
+
+**WHAT ABOUT ORGANICS AND APPLE SEARCH ADS?**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMTk0MjQ2NSwtMzk5NTE4NTk3LC0xMD
-gwOTM4MTI4XX0=
+eyJoaXN0b3J5IjpbLTIwODQzMjYyODQsLTM5OTUxODU5NywtMT
+A4MDkzODEyOF19
 -->
