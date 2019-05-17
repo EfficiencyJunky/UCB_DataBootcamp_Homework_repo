@@ -177,14 +177,16 @@ As you can see, I left a couple columns in there but they are commented out. Tho
 Here's an example output from this query (using SQL Alchemy):
 ![](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/actionable_insights.png?raw=true)
 
-So what we can immediately understand from this output is that our Google Ads have a much higher cost (CPI and CPT) than the others, and we can tell that our Facebook Evergreen ads are providing the best CPT, while our Pinterest ads have the lowest CPI. So this means we may want to focus on optimizations for Google and Increase spend on Facebook. We would also consider lowering our bid caps on Apple Search a
+So what we can immediately understand from this output is that our Google Ads have a much higher cost (CPI and CPT) than the others, and we can tell that our Facebook Evergreen ads are providing the best CPT, while our Pinterest ads have the lowest CPI. So this means we may want to focus on optimizations for Google and Increase spend on Facebook. We would also consider lowering our bid caps on the Advanced Apple Search ads because those costs are a little high.
+
+Note that we can't get the spend data from Apple Search Ads Basic through the above process, so we'll have to input that manually after running this query in order to get the CPI and CPT for that channel.
 
 
 
-## FINAL THOUGHTS AND IMPROVEMENTS
-As you can see by the final dataframe 
+## DISCLAIMERS ABOUT ACTUAL DATA USED IN 
+Just to be clear, the data provided 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MjU1NTE2LC0zNDM5ODUxOTQsLTEzMz
-Q2NDU3NjgsNjYxNTAyMDMyLC0zOTk1MTg1OTcsLTEwODA5Mzgx
-MjhdfQ==
+eyJoaXN0b3J5IjpbMTMyNzM0NDExNywtMzQzOTg1MTk0LC0xMz
+M0NjQ1NzY4LDY2MTUwMjAzMiwtMzk5NTE4NTk3LC0xMDgwOTM4
+MTI4XX0=
 -->
