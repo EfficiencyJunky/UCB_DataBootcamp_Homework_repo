@@ -55,8 +55,7 @@ In order to do this, we have to use a special service called a Mobile Measuremen
 With the above data we can essentially gain a complete understanding of where to put our money or what optimizations to make. But how do we combine it all together when it's all in different places and formatted differently by each advertiser?
 
 ### EXTRACTION!!!
-	The first step is to get all of the data in one place. To get the data from the ad-networks, I build a report on each ad-network and have that sent to my inbox each morning.
-	So that means one CSV for each Ad-Network
+The first step is to get all of the data in one place. To get the data from the ad-networks, I first build a report with all of the relevant columns of information on each ad-network and have that sent to my inbox each morning. Keep in mind each ad-network has a different way of delivering this information (columns, rows, naming conventions etc) So that means one CSV for each Ad-Network
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NDgxNDgzLC0xMDgwOTM4MTI4XX0=
+eyJoaXN0b3J5IjpbMTM1NjQ0ODIyMiwtMTA4MDkzODEyOF19
 -->
