@@ -85,6 +85,7 @@ So in the end we have 6 clean data frames from the advertisers:
 
 
 **NOW FOR THE MMP**
+
 Thankfully, the MMP already provides a separate CSV for iOS and ANDROID, but they also include a ton of extra columns of information that we don't need. So the transformation of each MMP data set needs to remove these columns, and add the same "campaign_type" column that we added to the ad networks' data frames so that we can combine them together in a groupby using this extra column.
 ![enter image description here](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/transform-appsflyer.png?raw=true)
 
@@ -187,7 +188,7 @@ Note that we can't get the spend data from Apple Search Ads Basic through the ab
 Just to be clear, the data in the CSVs used for this project are all completely fabricated for demonstration purposes. It would not be ethical to provide ACTUAL data from our company publicly, so that is why the data sets might seem small, and numbers not exactly accurate.
 In real life, my data sets are much larger, more dirty, and span a much longer date range.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTE2NDMyMzIsLTM0Mzk4NTE5NCwtMT
-MzNDY0NTc2OCw2NjE1MDIwMzIsLTM5OTUxODU5NywtMTA4MDkz
-ODEyOF19
+eyJoaXN0b3J5IjpbLTgwODQzOTYzMCwtMzQzOTg1MTk0LC0xMz
+M0NjQ1NzY4LDY2MTUwMjAzMiwtMzk5NTE4NTk3LC0xMDgwOTM4
+MTI4XX0=
 -->
