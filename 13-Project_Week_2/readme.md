@@ -1,4 +1,4 @@
-PROJECT WEEK 2: Making my life as an acquisition manager so much better
+# PROJECT WEEK 2: Making my life as an acquisition manager so much better
 
 In my day job, I run paid acquisition efforts at a small app publisher. My goal is to get the right message in front of the right potential users at the right time at the lowest possible cost. The margins in a business like this can be pretty tight, so it is of extreme importance to be very vigilant about spending and make sure that every dollar counts. 
 
@@ -32,18 +32,16 @@ Once the user clicks on an ad, they are taken to their respective app store (App
 
 Here's the information they gather:
 
- - 	Platform
+ - 	Ad Network
+ - Campaign/ad-set/ad Name
  - Date
-	* Advertiser
-	* Installs
-	* sessions
-	* workout_complete
-	* trial start
-		* af_purchase
-		* af_start_trial
-	* revenue
+ - Installs
+ - Sessions (app launches)
+ - Activations
+ - Trial starts
+ - Revenue events and revenue
 
+## PUTTING IT ALL TOGETHER
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzYxNTIzMjgsLTEwODA5MzgxMjhdfQ
-==
+eyJoaXN0b3J5IjpbNDIzNzkwNTYzLC0xMDgwOTM4MTI4XX0=
 -->
