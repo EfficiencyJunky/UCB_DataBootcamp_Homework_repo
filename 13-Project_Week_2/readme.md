@@ -89,8 +89,8 @@ Thankfully, the MMP already provides a separate CSV for iOS and ANDROID, but the
 ![enter image description here](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/transform-appsflyer.png?raw=true)
 
 **WHAT ABOUT ORGANICS AND APPLE SEARCH ADS?**
-Since we don't have the Ad network data for Organics (obviously) and the same goes for Apple Search Ads (because apple is just like that) we have to create placeholder "spoof" data frames for each of these sources 
+Since we don't have the Ad network data for Organics (obviously) and the same goes for Apple Search Ads (because apple is just like that) we have to create placeholder "spoof" data frames for each of these sources in place of the ad network data frame. This way, we can properly combine all of the sources together with the MMP data and the Organics and Apple Search Ads will just have "NaN
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcyMDA3MDYsNjYxNTAyMDMyLC0zOTk1MT
-g1OTcsLTEwODA5MzgxMjhdfQ==
+eyJoaXN0b3J5IjpbLTQwODM5MDA1MSw2NjE1MDIwMzIsLTM5OT
+UxODU5NywtMTA4MDkzODEyOF19
 -->
