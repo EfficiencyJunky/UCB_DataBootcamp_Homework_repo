@@ -93,8 +93,10 @@ Since we don't have the Ad network data for Organics (obviously) and the same go
 ![enter image description here](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/transform-organic_asa.png?raw=true)
 
 
+### LOADING!!!
+Now for the easy part! Essentially we just need to set up our Database schema to accept the prepared information in all of the dataframes.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQzNDAwNjA4LC0xMzM0NjQ1NzY4LDY2MT
+eyJoaXN0b3J5IjpbMTE5NTk1NDg0LC0xMzM0NjQ1NzY4LDY2MT
 UwMjAzMiwtMzk5NTE4NTk3LC0xMDgwOTM4MTI4XX0=
 -->
