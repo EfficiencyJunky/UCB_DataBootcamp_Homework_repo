@@ -69,8 +69,15 @@ The first step is to get all of the data in one place. To get the data from the 
 This is the meat and potatoes of solving this problem. We need to transform the information from each ad network CSV into a single simplified set of columns (some of the ad networks provide a ton of columns we don't need in their report) and add a couple columns that include tags that let us know what type of campaign each dollar was spent on, and make it easier to combine with the data from the MMP. 
 We also need to separate the data into two data-sets for each ad network. One with the top of funnel metrics for Android, and one with top of funnel metrics for IOS
 
-So in the end we have 
+So in the end we have 6 data frames from the advertisers.
+ - Facebook IOS 
+ - Facebook ANDROID 
+ - Pinterest IOS 
+ - Pinterest ANDDROID 
+ - Google IOS 
+ - Google ANDROID
 
+Each dataframe will be 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMDQ1MjgyMSwtMTA4MDkzODEyOF19
+eyJoaXN0b3J5IjpbLTQ2MjI1ODUxNywtMTA4MDkzODEyOF19
 -->
