@@ -174,10 +174,17 @@ In order to get the above information, we only need to run one simple query that
 
 As you can see, I left a couple columns in there but they are commented out. Those columns could be useful to add to this report if we wanted too. So many options! so little time!
 
-Here's an example output from this query (using ):
+Here's an example output from this query (using SQL Alchemy):
 ![](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/actionable_insights.png?raw=true)
+
+So what we can immediately understand from this output is that our Google Ads have a much higher cost (CPI and CPT) than the others, and we can tell th
+
+
+
+## FINAL THOUGHTS AND IMPROVEMENTS
+As you can see by the final dataframe 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NTIxNDYzOCwtMzQzOTg1MTk0LC0xMz
+eyJoaXN0b3J5IjpbLTE4NjEyMTkyNSwtMzQzOTg1MTk0LC0xMz
 M0NjQ1NzY4LDY2MTUwMjAzMiwtMzk5NTE4NTk3LC0xMDgwOTM4
 MTI4XX0=
 -->
