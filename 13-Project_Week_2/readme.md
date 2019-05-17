@@ -9,8 +9,10 @@ Here's a diagram that attempts to explain the dilemma:
 
 So what is going on here?
 
-Well, we give money to a variety of ad networks, and each of these networks individ give us information on how much we spent on 
+**DATA SOURCE 1 -- Top of the Funnel -- The Ad Networks:**
+Well, we give money to a variety of ad networks, and each of these networks individually reports how much we spent, which campaigns/ad-sets/ads we spent the money on and how many impressions, views, clicks we received in return.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NTY5NjM2NywtMTA4MDkzODEyOF19
+eyJoaXN0b3J5IjpbLTE5MTY1MTI0NDYsLTEwODA5MzgxMjhdfQ
+==
 -->
