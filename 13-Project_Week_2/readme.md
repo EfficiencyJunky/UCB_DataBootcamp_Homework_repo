@@ -66,7 +66,10 @@ The first step is to get all of the data in one place. To get the data from the 
  - NOTE: Apple Search Ads don't really provide a data report, but they send some of the spending data to our MMP so we just rely on that as our source of Spending data for Apple Search Ads
 
 ### TRANSFORMATION!!!
-This is the meat and potatoes of solving this problem. We need to transform the information from each ad network CSV into a single simplified set of columns (some of the ad networks provide a ton of columns we don't need in their report) and add a couple columns that include tags that let us know what type of campaign each dollar was spent on, and make it easier to combine with the data from the MMP. 
+This is the meat and potatoes of solving this problem. The goal is to get all of the ad networks data into the same format and add some columns of information specific to our advertising intere, then grab only the useful information from the MMP
+
+**STARTING WITH THE AD NETWORKS**
+We need to transform the information from each ad network CSV into a single simplified set of columns (some of the ad networks provide a ton of columns we don't need in their report) and add a couple columns that include tags that let us know what type of campaign each dollar was spent on, and make it easier to combine with the data from the MMP. 
 We also need to separate the data into two data-sets for each ad network. One with the top of funnel metrics for Android, and one with top of funnel metrics for IOS
 
 So in the end we have 6 data frames from the advertisers.
@@ -80,6 +83,6 @@ So in the end we have 6 data frames from the advertisers.
 **Each ad network's dataframe will be transformed into this format:**
 ![enter image description here](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/transform-facebook.png?raw=true)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjU2MDAzNDMsLTM5OTUxODU5NywtMT
-A4MDkzODEyOF19
+eyJoaXN0b3J5IjpbMTU2NjcxMDAzNywtMzk5NTE4NTk3LC0xMD
+gwOTM4MTI4XX0=
 -->
