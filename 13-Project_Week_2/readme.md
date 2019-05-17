@@ -28,7 +28,8 @@ Here's essentially what they provide:
  - Clicks
 
 **DATA SOURCE 2 -- Mobile Measurement Partner: Providing Mid/Lower-funnel data**
-Once the user clicks on an ad, they are taken to their respective app store (Apple's AppStore or Google's Play Store), and at this point, 
+Once the user clicks on an ad, they are taken to their respective app store (Apple's AppStore or Google's Play Store), and at this point, they have left the ad network's domain. Once they download the app and install it, we need to know which ad network to attribute the install and subsequent user events to. In order to do this, we have to use a special service called a Mobile Measurement Partner. They are an unbiased 3rd party that checks in with each ad network and verifies who gets credit for the install. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMTIxOTMwNiwtMTA4MDkzODEyOF19
+eyJoaXN0b3J5IjpbLTEwNzU2MTM4MDIsLTEwODA5MzgxMjhdfQ
+==
 -->
