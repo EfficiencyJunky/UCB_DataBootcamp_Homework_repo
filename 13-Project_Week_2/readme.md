@@ -26,7 +26,7 @@ To start the process of acquiring users, we give money to a variety of ad networ
 
 Each of these networks individually reports their top of the funnel metrics split out by Campaign/Ad-set/ad:
 
-**Here's essentially what data they provide:**
+**Here's the essential data they each provide:**
  - Date
  - Spend
  - Reach/Impressions
@@ -66,8 +66,8 @@ The first step is to get all of the data in one place. To get the data from the 
  - NOTE: Apple Search Ads don't really provide a data report, but they send some of the spending data to our MMP so we just rely on that as our source of Spending data for Apple Search Ads
 
 ### TRANSFORMATION!!!
-This is the meat and potatoes of solving this problem
+This is the meat and potatoes of solving this problem. We need to transform the information from each ad network CSV into a single set of column
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUxNzEwNTcyLC0xMDgwOTM4MTI4XX0=
+eyJoaXN0b3J5IjpbLTU1NTU4Mzc5NSwtMTA4MDkzODEyOF19
 -->
