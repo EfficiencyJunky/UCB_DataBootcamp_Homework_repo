@@ -69,10 +69,10 @@ The first step is to get all of the data in one place. To get the data from the 
 This is the meat and potatoes of solving this problem. The goal is to get all of the ad networks data into the same format and add some columns of information specific to our advertising interests, then from the MMP only take the useful information from their CSV and prepare it so it can be easily combined with the ad networks whenever we decide we want to do that.
 
 **STARTING WITH THE AD NETWORKS**
-We need to transform the information from each ad network CSV into a single simplified set of columns (some of the ad networks provide a ton of columns we don't need in their report) and add a couple columns that include tags that let us know what type of campaign each dollar was spent on, and make it easier to combine with the data from the MMP. 
-We also need to separate the data into two data-sets for each ad network. One with the top of funnel metrics for Android, and one with top of funnel metrics for IOS
+We need to transform the information from each ad network CSV into a single simplified set of columns (some of the ad networks provide a ton of columns we don't need in their report) and add a couple columns that include tags that let us know what type of campaign each dollar was spent on, what OS the campaigns were targeting and make it easier to combine with the data from the MMP. 
+We also need to separate the data into two data-sets for each ad network based on the OS the campaigns were targeting. One dataframe with the top of funnel metrics for Android, and one with top of funnel metrics for IOS
 
-So in the end we have 6 clean data frames from the advertisers.
+So in the end we have 6 clean data frames from the advertisers:
  - Facebook IOS 
  - Facebook ANDROID 
  - Pinterest IOS 
@@ -85,8 +85,8 @@ So in the end we have 6 clean data frames from the advertisers.
 
 
 **NOW FOR THE MMP**
-
+Thankfu
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQwMjQ2ODc0LC0zOTk1MTg1OTcsLTEwOD
-A5MzgxMjhdfQ==
+eyJoaXN0b3J5IjpbLTgyMTk0MjQ2NSwtMzk5NTE4NTk3LC0xMD
+gwOTM4MTI4XX0=
 -->
