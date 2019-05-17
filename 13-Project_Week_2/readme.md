@@ -144,8 +144,10 @@ There are a million ways we could use this data to tell stories and draw actiona
 
 The daily / weekly report of Spend, Installs, Trial Starts, and the Cost Per Install and Cost Per Trial Start broken out by each ad network and campaign_type.
 
-This set of information is paramount to understanding what bid-caps we need to set on each campaign of each network in order to ensure we aren't spending more money than 
+This set of information is paramount to understanding what bid-caps we need to set on each campaign of each network in order to ensure we aren't spending more money than we are making and run a very efficient and lean business.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUzNDUzNzUzLC0xMzM0NjQ1NzY4LDY2MT
-UwMjAzMiwtMzk5NTE4NTk3LC0xMDgwOTM4MTI4XX0=
+eyJoaXN0b3J5IjpbLTExMzkxNTU4MDMsLTEzMzQ2NDU3NjgsNj
+YxNTAyMDMyLC0zOTk1MTg1OTcsLTEwODA5MzgxMjhdfQ==
 -->
