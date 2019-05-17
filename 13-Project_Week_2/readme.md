@@ -16,7 +16,7 @@ Let's get a quick explanation of the above diagram, which ad networks we're talk
 
 **DATA SOURCE 1 -- The Ad Networks: Providing top of the funnel data**
 
-To start the process of acquiring users, we give money to a variety of ad networks:
+To start the process of acquiring users, we give money to a variety of ad networks to advertise our app, which is available on Apple's AppStore as well as Google's Play Store:
 
  - Facebook
  - Pinterest
@@ -55,7 +55,7 @@ In order to do this, we have to use a special service called a Mobile Measuremen
 With the above data we can essentially gain a complete understanding of where to put our money or what optimizations to make. But how do we combine it all together when it's all in different places and formatted differently by each advertiser?
 
 ### EXTRACTION!!!
-The first step is to get all of the data in one place. To get the data from the ad-networks, I first build a report with all of the relevant columns of information on each ad-network and have that sent to my inbox each morning. Keep in mind each ad-network has a different way of delivering this information (columns, rows, naming conventions etc) So that means one CSV in a different format for each Ad-Network.
+The first step is to get all of the data in one place. To get the data from the ad-networks, I first build a report with all of the relevant columns of information on each ad-network and have that sent to my inbox each morning. Keep in mind each ad-network has a different way of delivering this information (columns, rows, naming conventions etc) So that means we have to extract one CSV in a different format for each Ad-Network.
 
 **LIST OF RAW DATA CSV FILES**
  - Facebook
@@ -69,5 +69,5 @@ The first step is to get all of the data in one place. To get the data from the 
 This is the meat and potatoes of solving this problem
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNDg3NjgwLC0xMDgwOTM4MTI4XX0=
+eyJoaXN0b3J5IjpbMzUxNzEwNTcyLC0xMDgwOTM4MTI4XX0=
 -->
