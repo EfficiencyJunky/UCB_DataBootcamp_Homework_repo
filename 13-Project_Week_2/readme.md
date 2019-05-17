@@ -27,8 +27,8 @@ Here's essentially what they provide:
  - Views (if applicable)
  - Clicks
 
-**DATA SOURCE 2 -- Install and Post Install Metrics: Mid**
-This information alone can't tell us how good our ads are at acquiring qualified users though. For that 
+**DATA SOURCE 2 -- Mobile Measurement Partner: Providing Mid/Lower-funnel data**
+Once the user clicks on an ad, they are taken to their respective app store (Apple's AppStore or Google's Play Store), and at this point, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDQ3MDA1LC0xMDgwOTM4MTI4XX0=
+eyJoaXN0b3J5IjpbLTcyMTIxOTMwNiwtMTA4MDkzODEyOF19
 -->
