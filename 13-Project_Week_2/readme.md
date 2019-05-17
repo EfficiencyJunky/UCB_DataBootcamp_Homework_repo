@@ -10,10 +10,15 @@ Here's a diagram that attempts to explain the dilemma:
 So what is going on here?
 
 **DATA SOURCE 1 -- The Ad Networks: Providing top of the funnel data**
-To start the process of acquiring users, we give money to a variety of ad networks, and each of these networks individually reports the following:
+To start the process of acquiring users, we give money to a variety of ad networks, and each of these networks individually reports the following split out by Campaign/Ad-set/ad:
 
- - List item
+ - Date
+ - Spend
+ - Reach/Impressions
+ - Views (if applicable)
+ - Clicks
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NzQxMzEyLC0xMDgwOTM4MTI4XX0=
+eyJoaXN0b3J5IjpbLTE1NDgzMTEzMTksLTEwODA5MzgxMjhdfQ
+==
 -->
