@@ -183,10 +183,10 @@ Note that we can't get the spend data from Apple Search Ads Basic through the ab
 
 
 
-## DISCLAIMERS ABOUT ACTUAL DATA USED IN 
-Just to be clear, the data provided 
+## DISCLAIMERS ABOUT ACTUAL DATA USED IN THIS PROJECT
+Just to be clear, the data in the CSVs used for this project are all completely fabricated for demonstration purposes. It would not be ethical to provide ACTUAL data from our company publicly, so that is why the data sets might seem small, and numbers not exactly accurate.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNzM0NDExNywtMzQzOTg1MTk0LC0xMz
+eyJoaXN0b3J5IjpbLTc3MTIyMTUwOCwtMzQzOTg1MTk0LC0xMz
 M0NjQ1NzY4LDY2MTUwMjAzMiwtMzk5NTE4NTk3LC0xMDgwOTM4
 MTI4XX0=
 -->
