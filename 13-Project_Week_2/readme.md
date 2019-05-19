@@ -69,6 +69,7 @@ The first step is to get all of the data in one place. To get the data from the 
 This is the meat and potatoes of solving this problem. The goal is to get all of the ad networks data into the same format and add some columns of information specific to our advertising interests, then from the MMP only take the useful information from their CSV and prepare it so it can be easily combined with the ad networks whenever we decide we want to do that.
 
 **STARTING WITH THE AD NETWORKS**
+
 We need to transform the information from each ad network CSV into a single simplified set of columns (some of the ad networks provide a ton of columns we don't need in their report) and add a couple columns that include tags that let us know what type of campaign each dollar was spent on, what OS the campaigns were targeting and make it easier to combine with the data from the MMP. 
 We also need to separate the data into two data-sets for each ad network based on the OS the campaigns were targeting. One dataframe with the top of funnel metrics for Android, and one with top of funnel metrics for IOS
 
@@ -85,14 +86,17 @@ So in the end we have 6 clean data frames from the advertisers:
 
 
 **NOW FOR THE MMP**
+
 Thankfully, the MMP already provides a separate CSV for iOS and ANDROID, but they also include a ton of extra columns of information that we don't need. So the transformation of each MMP data set needs to remove these columns, and add the same "campaign_type" column that we added to the ad networks' data frames so that we can combine them together in a groupby using this extra column.
 ![enter image description here](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/transform-appsflyer.png?raw=true)
 
 **WHAT ABOUT ORGANICS AND APPLE SEARCH ADS?**
+
 Since we don't have the Ad network data for Organics (obviously) and the same goes for Apple Search Ads (because apple is just like that) we have to create placeholder "spoof" data frames for each of these sources in place of the ad network data frame. This way, we can properly combine all of the sources together with the MMP data and the Organics and Apple Search Ads will just have "NaN" for the top-funnel metrics that we aren't able to get for them
 ![enter image description here](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/transform-organic_asa.png?raw=true)
 
 **COMBINE THEM TOGETHER INTO SEPARATE IOS AND ANDROID DATAFRAMES**
+
 Now that we've nicely formatted all of our dataframes from each advertiser to have the same structure and separated them by operating system (IOS and ANDROID) all we have to do is combine all of the individual advertiser dataframes for each OS.
 The result is two dataframes (one for IOS and one for ANDROID) with all the top funnel metrics tagged by advertiser and campaign_type! WOOT!
 
@@ -174,9 +178,20 @@ In order to get the above information, we only need to run one simple query that
 
 As you can see, I left a couple columns in there but they are commented out. Those columns could be useful to add to this report if we wanted too. So many options! so little time!
 
-Here's an example output from this query:
+Here's an example output from this query (using SQL Alchemy):
+![](https://github.com/EfficiencyJunky/UCB_DataBootcamp_Homework_repo/blob/master/13-Project_Week_2/Resources/actionable_insights.png?raw=true)
 
+So what we can immediately understand from this output is that our Google Ads have a much higher cost (CPI and CPT) than the others, and we can tell that our Facebook Evergreen ads are providing the best CPT, while our Pinterest ads have the lowest CPI. So this means we may want to focus on optimizations for Google and Increase spend on Facebook. We would also consider lowering our bid caps on the Advanced Apple Search ads because those costs are a little high.
+
+Note that we can't get the spend data from Apple Search Ads Basic through the above process, so we'll have to input that manually after running this query in order to get the CPI and CPT for that channel.
+
+
+
+## DISCLAIMERS ABOUT ACTUAL DATA USED IN THIS PROJECT
+Just to be clear, the data in the CSVs used for this project are all completely fabricated for demonstration purposes. It would not be ethical to provide ACTUAL data from our company publicly, so that is why the data sets might seem small, and numbers not exactly accurate.
+In real life, my data sets are much larger, more dirty, and span a much longer date range.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0Mzk4NTE5NCwtMTMzNDY0NTc2OCw2Nj
-E1MDIwMzIsLTM5OTUxODU5NywtMTA4MDkzODEyOF19
+eyJoaXN0b3J5IjpbLTE4Nzc1MDExMTYsLTgwODQzOTYzMCwtMz
+QzOTg1MTk0LC0xMzM0NjQ1NzY4LDY2MTUwMjAzMiwtMzk5NTE4
+NTk3LC0xMDgwOTM4MTI4XX0=
 -->
