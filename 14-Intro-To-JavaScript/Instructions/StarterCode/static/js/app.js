@@ -1,15 +1,18 @@
 // from data.js
 let tableData = data;
 
-// Select the submit button and tbody
+// Select the buttons
 let submit = d3.select("#filter-btn");
 let clearButton = d3.select("#clear-filter-btn");
+
+// select the table elements
 let thead = d3.select("thead");
 let tbody = d3.select("tbody");
 
+// fill the table with all the data to begin
 fillTableWithValues2(tableData);
 
-
+// the brute force way of filling the table up
 function fillTableWithValues1 (filteredData){
 
     tbody.html("");
@@ -29,7 +32,7 @@ function fillTableWithValues1 (filteredData){
 
 }
 
-
+// the more elegant way of filling the table up
 function fillTableWithValues2 (filteredData){
 
     tbody.html("");
@@ -49,7 +52,7 @@ function fillTableWithValues2 (filteredData){
     });
 }
 
-
+// a failed experiment for filling the table up
 function fillTableWithValues3 (filteredData){
 
     tbody.html("");
@@ -82,7 +85,7 @@ function fillTableWithValues3 (filteredData){
 }
 
 
-
+// click handler for "submit" button
 submit.on("click", function() {
 
     // Prevent the page from refreshing
@@ -123,8 +126,8 @@ submit.on("click", function() {
 
 });
 
-
-// we need a way to clear all the filters and get back to square one
+// click handler for "clear filters" button because it's just nice to 
+// be able to clear all the filters and get back to square one
 clearButton.on("click", function() {
 
     // Prevent the page from refreshing
