@@ -75,7 +75,7 @@ def sample_metadata(sample):
         sample_metadata["BBTYPE"] = result[5]
         sample_metadata["WFREQ"] = result[6]
 
-    print(sample_metadata)
+    # print(sample_metadata)
     return jsonify(sample_metadata)
 
 
@@ -92,9 +92,9 @@ def samples(sample):
     # sort the data so that it can easily be split up on the front end
     sample_data_sorted = sample_data.sort_values(by=[sample], ascending=False)
 
-    print(sample_data_sorted)
+    # print(sample_data_sorted)
 
-    print("testing: ", df.loc[df["otu_id"] == 352, ["otu_id", "otu_label", sample]])
+    # print("testing: ", df.loc[df["otu_id"] == 352, ["otu_id", "otu_label", sample]])
 
     # Format the data to send as json
     data = {
