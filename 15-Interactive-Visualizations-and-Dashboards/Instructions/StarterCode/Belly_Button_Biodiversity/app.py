@@ -88,11 +88,19 @@ def samples(sample):
     # Filter the data based on the sample number and
     # only keep rows with values above 1
     sample_data = df.loc[df[sample] > 1, ["otu_id", "otu_label", sample]]
+
+    # sort the data so that it can easily be split up on the front end
+    sample_data_sorted = sample_data.sort_values(by=[sample], ascending=False)
+
+    print(sample_data_sorted)
+
+    print("testing: ", df.loc[df["otu_id"] == 352, ["otu_id", "otu_label", sample]])
+
     # Format the data to send as json
     data = {
-        "otu_ids": sample_data.otu_id.values.tolist(),
-        "sample_values": sample_data[sample].values.tolist(),
-        "otu_labels": sample_data.otu_label.tolist(),
+        "otu_ids": sample_data_sorted.otu_id.values.tolist(),
+        "sample_values": sample_data_sorted[sample].values.tolist(),
+        "otu_labels": sample_data_sorted.otu_label.tolist(),
     }
     return jsonify(data)
 

@@ -108,6 +108,8 @@ function buildCharts(sample) {
 
     // @TODO: Build a Bubble Chart using the sample data
 
+    // sampleData.sample_values.max
+
     var bubbleTrace = {
       x: sampleData.otu_ids,
       y: sampleData.sample_values,
@@ -116,7 +118,12 @@ function buildCharts(sample) {
       hoverinfo: 'x+y+text',
       marker: {
         color: sampleData.otu_ids,
-        size: sampleData.sample_values
+        size: sampleData.sample_values.map( (value) => {
+          if(value < 10){
+            return 10; 
+          }
+          return value;
+        })
       }
     };
     
@@ -126,6 +133,7 @@ function buildCharts(sample) {
       hovermode:'closest',
       // title: 'Bubble Chart Hover Text',
       // showlegend: false,
+      xaxis: {title: "OTU ID"},
       height: 600,
       width: 1200
     };
@@ -133,18 +141,17 @@ function buildCharts(sample) {
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
     // Plotly.newPlot('bubble', bubbleData);
 
-
-
     // @TODO: Build a Pie Chart
     // HINT: You will need to use slice() to grab the top 10 sample_values,
     // otu_ids, and labels (10 each).
 
     // Part 5 - Working Pie Chart
     var pieTrace = {
-      labels: sampleData.otu_ids,
-      values: sampleData.sample_values,
+      labels: sampleData.otu_ids.slice(0, 10),
+      values: sampleData.sample_values.slice(0, 10),
       type: 'pie',
-      text: sampleData.otu_labels,
+      text: sampleData.otu_labels.slice(0, 10),
+      textinfo: 'percent',
       hoverinfo: 'text'
     };
 
@@ -152,8 +159,16 @@ function buildCharts(sample) {
 
     var pieLayout = {
       // title: "'Bar' Chart",
-      height: 400,
-      width: 400    
+      autosize: true,
+      margin: {
+        l: -50,
+        r: -50
+        // b: 100,
+        // t: 100,
+        // pad: 1
+      }
+      // height: 500,
+      // width: 500    
     };
 
     // Plotly.newPlot("pie", pieData);
