@@ -1,7 +1,10 @@
 let earthquakes = {};
 let significantEarthquakes = {};
 let tectonicPlates = L.geoJson(tectonicPlatesGeoJSON, 
-                                {style: { fillOpacity: 0.0, weight: 2, opacity: 1, color: 'orange' }} 
+                                { 
+                                  pane: 'tectonicPlatesPane',
+                                  style: { fillOpacity: 0.0, weight: 2, opacity: 1, color: 'orange' }
+                                }
                               );
 
 let numEarthquakeMaps = 2;
@@ -31,8 +34,8 @@ var normalEarthquakesQueryUrl = "https://earthquake.usgs.gov/fdsnws/event/1/quer
 
 // Perform a GET request to the query URL
 d3.json(normalEarthquakesQueryUrl, function(data) {
-  // Once we get a response, send the data.features object to the createFeatures function
-  earthquakes = createFeatures(data.features, getColorNormal);
+  // Once we get a response, send the data.features object to the createFeatures function along with color seting function and pane name
+  earthquakes = createFeatures(data.features, getColorNormal, 'normalEarthquakesPane');
   
   myAsyncCounter.increment();
 
@@ -48,7 +51,7 @@ var significantEarthquakesQueryURL = "https://earthquake.usgs.gov/earthquakes/fe
 
 d3.json(significantEarthquakesQueryURL, function(data) {
   // Once we get a response, send the data.features object to the createFeatures function
-  significantEarthquakes = createFeatures(data.features, getColorSignificant);
+  significantEarthquakes = createFeatures(data.features, getColorSignificant, 'significantEarthquakesPane');
   
   myAsyncCounter.increment();
 
@@ -61,7 +64,7 @@ d3.json(significantEarthquakesQueryURL, function(data) {
 
 
 // **************** FUNCTION TO CREATE THE FEATURES FOR EACH API CALL ******************
-function createFeatures(earthquakeData, getColor) {
+function createFeatures(earthquakeData, getColor, paneName) {
 
   // Define a function we want to run once for each feature in the features array
   // Give each feature a popup describing the place and time of the earthquake
@@ -84,6 +87,7 @@ function createFeatures(earthquakeData, getColor) {
 
     let geojsonMarkerOptions = {
       // these properties deligate the fill color and opacity
+      pane: paneName,
       fillOpacity: 0.8,
       fillColor: color,
       // this properties sets the radius size DUH!
@@ -164,8 +168,21 @@ function createMap() {
       37.09, -95.71
     ],
     zoom: 5,
-    layers: [streetmap, earthquakes]
+    // layers: [streetmap, earthquakes]
   });
+
+  // set up our panes and zIndex ordering so they layer correctly when added and removed using the UI control layer
+  myMap.createPane('normalEarthquakesPane');
+  myMap.getPane('normalEarthquakesPane').style.zIndex = 400;
+
+  myMap.createPane('significantEarthquakesPane');
+  myMap.getPane('significantEarthquakesPane').style.zIndex = 401;
+  
+  myMap.createPane('tectonicPlatesPane');
+  myMap.getPane('tectonicPlatesPane').style.zIndex = 399;
+
+  streetmap.addTo(myMap);
+  earthquakes.addTo(myMap);
 
 
   // Create a layer control
