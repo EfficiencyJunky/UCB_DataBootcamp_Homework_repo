@@ -3,12 +3,19 @@ let significantEarthquakes = {};
 let tectonicPlates = L.geoJson(tectonicPlatesGeoJSON, 
                                 { 
                                   pane: 'tectonicPlatesPane',
+                                  onEachFeature: (function (feature, layer) {
+                                    layer.bindPopup(
+                                      "<h3>" + feature.properties.PlateName + " Plate</h3>"
+                                    );
+                                  }),
                                   style: { fillOpacity: 0.0, weight: 2, opacity: 1, color: 'orange' }
                                 }
                               );
 
+
 let numEarthquakeMaps = 2;
 var myAsyncCounter = new asyncCounter(numEarthquakeMaps, createMap);
+
 
 
 // **************** FUNCTIONS TO GET COLORS FOR CIRCLES BASED ON MAGNITUDE AND LEGEND ******************
