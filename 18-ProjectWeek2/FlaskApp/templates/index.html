@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TK's Acquisition Dashboard V1</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='icon/favicon.ico') }}">
+  <!-- <link rel="shortcut icon" href="./../icon/favicon.ico"> -->
+  <style>
+    .HiddenCheckbox {
+      display: none;  
+    }
+    .HiddenElement {
+      display: none;  
+    }    
+    .YAxisRangeSetter, .LTVPerTrialSetter{
+      width: 50px;
+      /* display: none;   */
+    }       
+    .highlight, .table-striped > tbody > tr:nth-child(odd).highlight > td {
+      background-color: rgb(92, 92, 92);
+      color: white;
+    }    
+    </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- JUMBOTRON ROW -->
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>TK's Acquisition Dashboard</h1>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-3">
+
+
+        <div class="row"><div class="col-xs-12">
+          <div class="well">
+            <h5>SELECT OS:</h5>
+            <input type="checkbox" class="OSCheckbox" value="IOS"> IOS</br>
+            <input type="checkbox" class="OSCheckbox" value="ANDROID"> ANDROID<!-- </br> -->
+            <!-- COMBINED <input type="checkbox" class="OSCheckbox" value="COMBINED">  -->
+            <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+          </div>
+        </div></div>
+
+        <div class="row visible-for-line-graph"><div class="col-xs-12">
+          <div class="well">
+            <div class="row">
+              <div class="col-md-6 col-xs-6">
+                Y1 Max</br>
+                <input type="text" class="YAxisRangeSetter" name="set_y1axis_range">
+                <!-- <input type="text" name="comparison_type" class="ComparisonMetrics" value="spend_vs_revenue" checked> Spend vs. Revenue</br> -->
+              </div>
+              <div class="col-md-6 col-xs-6">
+                Y2 Max</br>
+                <input type="text" class="YAxisRangeSetter" name="set_y2axis_range">
+                <!-- <input type="text" name="comparison_type" class="ComparisonMetrics" value="spend_vs_revenue" checked> Spend vs. Revenue</br> -->
+              </div>              
+            </div>
+          </div> 
+        </div></div>
+
+        <div class="row HiddenElement visible-for-comparison-chart"><div class="col-xs-12">
+          <div class="well">
+            <div class="row">
+              <div class="col-md-6 col-xs-6">
+                <input type="checkbox" class="LTVPerTrialCheckbox" value="use_ltv_per_trial">
+                 Show LTV</br>per Trial</br>
+                <!-- <input type="text" name="comparison_type" class="ComparisonMetrics" value="spend_vs_revenue" checked> Spend vs. Revenue</br> -->
+              </div>
+              <div class="col-md-6 col-xs-6">
+                LTV Value</br>
+                <input type="text" class="LTVPerTrialSetter" name="set_ltv_per_trial" value="19">
+                <!-- <input type="text" name="comparison_type" class="ComparisonMetrics" value="spend_vs_revenue" checked> Spend vs. Revenue</br> -->
+              </div>              
+            </div>
+          </div> 
+        </div></div>
+
+
+        
+
+
+      </div>
+
+      <div class="col-sm-3">
+        <div class="well">
+          <h5>SELECT Advertiser(s):</h5>
+          <input type="checkbox" class="AdvertiserCheckbox" value="Facebook Ads"> Facebook</br>
+          <input type="checkbox" class="AdvertiserCheckbox" value="pinterest_int"> Pinterest</br>
+          <input type="checkbox" class="AdvertiserCheckbox" value="snapchat_int"> Snap</br>
+          <input type="checkbox" class="AdvertiserCheckbox" value="googleadwords_int"> Google</br>
+          <input type="checkbox" class="AdvertiserCheckbox" value="Apple Search Ads"> Apple Search</br>
+          <input type="checkbox" class="AdvertiserCheckbox" value="Organic"> Organic
+          <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+        </div>
+      </div>
+
+      <!-- "advertiser", 
+      "spend", 
+      "impressions", 
+      "clicks", 
+      "views", 
+      "installs", 
+      "sessions", 
+      "new_workout_saved_unique", 
+      "trial_starts_all", 
+      "ltv_subs_all", 
+      "ltv_subs_revenue"]].to_json(orient='records') -->
+
+      <div class="col-sm-3">
+        <div class="well">
+          <div class="row">
+            <div class="col-sm-12">
+              <h5>SELECT Metric(s):</h5>
+            </div>
+          </div>
+          
+          <div class="row visible-for-line-graph">
+            <div class="col-md-6 col-xs-6">
+              <input type="checkbox" class="MetricsCheckbox" value="spend" checked> Spend</br>
+              <input type="checkbox" class="MetricsCheckbox" value="cpi"> CPI</br>
+              <input type="checkbox" class="MetricsCheckbox" value="cpt"> CPT</br>
+              <input type="checkbox" class="MetricsCheckbox" value="installs"> Installs</br>
+              <input type="checkbox" class="MetricsCheckbox" value="trial_starts_all"> Trial Starts</br>
+              <input type="checkbox" class="MetricsCheckbox" value="ltv_subs_all"> Subscribers</br>
+              
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <input type="checkbox" class="MetricsCheckbox" value="ltv_subs_revenue"> Revenue</br>
+              <input type="checkbox" class="MetricsCheckbox" value="arpu"> ARPU</br>
+              <input type="checkbox" class="MetricsCheckbox" value="arp_trial"> ARP/Trial</br>
+              <input type="checkbox" class="MetricsCheckbox" value="roas"> ROAS</br>
+              <input type="checkbox" class="MetricsCheckbox" value="trials_per_user"> Trials/Inst</br>
+              <input type="checkbox" class="MetricsCheckbox" value="subs_per_trial"> Subs/Trial</br>
+              <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+            </div>
+          </div>
+
+          <div class="row HiddenElement visible-for-comparison-chart">  
+            <div class="col-md-12 col-xs-12">
+              <input type="radio" name="comparison_type" class="ComparisonMetrics" value="spend_vs_revenue" checked> Spend vs. Revenue</br>
+              <input type="radio" name="comparison_type" class="ComparisonMetrics" value="spend_vs_gm"> Spend vs. Gross Margin</br>
+              <input type="radio" name="comparison_type" class="ComparisonMetrics" value="spend_vs_roi"> Spend vs. ROI</br>
+              <input type="radio" name="comparison_type" class="ComparisonMetrics" value="gm_vs_roi"> Gross Margin vs. ROI</br>
+            </div>
+          </div>
+       
+            <!-- The checkbox below is a hidden checkbox. IT IS IMPORTANT!! It is the way we are making the Y axis visible,
+                  even if no other checkboxes for metrics that enable the y axis are checked. It's a plotly.js hack!! -->
+            <input type="checkbox" class="MetricsCheckbox HiddenCheckbox" value="yaxis_placeholder" checked> <!-- y1 fix don't uncheck</br> -->
+        </div>
+
+      </div>      
+
+
+      <div class="col-sm-3">
+        <div class="row"><div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Date Picker</h3>
+            </div>
+            <!-- <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" /> -->
+            <div id="reportrange" class="panel-body" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                <i class="fa fa-calendar"></i>&nbsp;
+                <span></span> <i class="fa fa-caret-down"></i>
+            </div>
+            <!-- <div id="date-picker" class="panel-body" onchange="dateChanged(this.value)"></div> -->
+          </div>
+        </div></div>  
+
+        <div class="row"><div class="col-xs-12">
+          <div class="well">
+            <h5>Additional Controls:</h5>
+            <input type="checkbox" class="GraphModifierCheckBox" value="stacked"> Stacked Graph</br>
+            <input type="checkbox" class="GraphModifierCheckBox" value="movingaverage"> Moving Average (unused)</br>
+            <input type="checkbox" class="GraphModifierCheckBox" value="comparison"> Comparison Chart</br>
+            <!--<input type="checkbox" class="OSCheckbox" value="ANDROID"> ANDROID -->
+            <!-- </br> -->
+            <!-- COMBINED <input type="checkbox" class="OSCheckbox" value="COMBINED">  -->
+            <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+          </div>
+        </div></div>
+
+
+
+      </div>
+    </div>
+
+    <!-- <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Sample Data</h3>
+          </div>
+          <div id="sample-data" class="panel-body"></div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="linegraph"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <!-- <th>date</th> -->
+              <th>Advertiser</th>
+              <th>Spend</th>
+              <th>Impressions</th>
+              <th>Clicks</th>
+              <th>CTR</th>
+              <th>Views</th>
+              <th>Installs</th>
+              <th>CPI</th>
+              <th>ARPU</th>
+              <th>Inst/ Click</th>
+              <th>Sessions</th>                                                                                    
+              <th>Unique Workouts</th>
+              <th>Trial Starts</th>
+              <th>CPT</th>
+              <th>ARP Trial</th>
+              <th>Trials/ User</th>
+              <th>Subs</th>
+              <th>Subs/ Trial</th>
+              <th>Revenue</th>
+              <th>ROAS</th>
+            </tr>
+          </thead>
+          <tbody id="tabledata">
+            <tr>
+              <td>The date</td>
+              <td>Advertiser Name</td>
+              <td>Number of Installs</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="comparisongraph"></div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <script src="{{ url_for('static', filename='js/bonus.js') }}"></script> -->
+  
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  
+  <!-- ########### A SIMPLE DATE PICKER ############ -->
+  <!-- <script>
+      $(function() {
+        $('input[name="daterange"]').daterangepicker({
+          opens: 'left'
+        }, 
+        // function(start, end, label) {
+          dateChanged
+          // console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        // }
+        );
+      });
+  </script> -->
+
+  <!-- ########### A MORE ADVANCED DATE PICKER WITH PREDEFINED RANGES ############ -->
+  <script type="text/javascript">
+    $(function() {
+    
+        var start = moment().subtract(7, 'days');
+        var end = moment().subtract(1, 'days');
+    
+        function cb(start, end) {
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            dateChanged(start, end);
+        }
+    
+        $('#reportrange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+              'Today': [moment(), moment()],
+              'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+              'Last 7 Days': [moment().subtract(7, 'days'), moment().subtract(1, 'days')],
+              'Last 14 Days': [moment().subtract(14, 'days'), moment().subtract(1, 'days')],
+              'Last 30 Days': [moment().subtract(30, 'days'), moment().subtract(1, 'days')],
+              'Last 90 Days': [moment().subtract(90, 'days'), moment().subtract(1, 'days')],
+              '-10 to -24 Days': [moment().subtract(24, 'days'), moment().subtract(10, 'days')],
+              '-10 to April 6': [moment("2019-04-06"), moment().subtract(10, 'days')],
+              'All Time': [moment("2018-06-28"), moment().subtract(1, 'days')],
+              'This Month': [moment().startOf('month'), moment().endOf('month')],
+              'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            }
+        }, cb);
+    
+        cb(start, end);
+    
+    });
+    </script>
+
+
+</body>
+
+</html>
